@@ -1,0 +1,22 @@
+doctype
+html(ng-app="app")
+   head
+      title URBANK
+      meta(charset="utf-8")
+      link(rel="stylesheet" type="text/css" href="css/ally.css")
+      script(src="js/ally.js")
+      script(src="//localhost:35729/livereload.js")
+
+   body
+      div(ui-view="header")
+
+      .container
+         .row
+            .col-md-9(role="main")
+               div(ui-view="welcome")
+               div(ui-view="rates")
+
+            .col-md-3(role="complementary")
+               div(ui-view="news")
+
+      div(ui-view="footer")

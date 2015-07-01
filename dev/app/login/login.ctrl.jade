@@ -1,0 +1,28 @@
+form.login-ctrl.form-horizontal(ng-submit="login()")
+
+   .modal-header
+      button.close(ng-click="$dismiss()" type="button" data-dismiss="modal" aria-label="Close")
+         span(aria-hidden="true") &times;
+      h4.modal-title Log In
+
+
+
+   .modal-body 
+      .alert.alert-danger(ng-if="model.errorList.length")
+         ul
+            li(ng-repeat="error in model.errorList") {{error}}
+
+      .form-group
+         label(for="login-username").col-sm-2.control-label Username:
+         .col-sm-10
+            input(ng-model="model.username" id="login-username" type="text").form-control
+
+      .form-group
+         label(for="login-password").col-sm-2.control-label Password:
+         .col-sm-10
+            input(ng-model="model.password" id="login-username" type="password").form-control
+
+
+
+   .modal-footer 
+      button.btn.btn-primary(type="submit") Login

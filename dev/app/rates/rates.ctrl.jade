@@ -1,0 +1,32 @@
+.rates-ctrl   
+   tabset
+      tab(heading="Earning Rates")
+         table.table.table-striped
+            thead
+               tr
+                  td Name
+                  td Annual Percentage Yield
+                  td Est. Earnings for 1 Year*
+            tbody
+               tr(ng-repeat="rate in model.rateList | orderBy: 'earnings' :true")
+                  td {{rate.name}}
+                  td {{rate.apy}} %
+                  td $ {{rate.earnings}}
+         .help-block.pull-right *Based on $50,000 deposit.
+         .clear
+
+
+      tab(heading="Percentage Rates")
+         table.table.table-striped
+            thead
+               tr
+                  td Name
+                  td Annual Percentage Yield
+                  td Est. Earnings for 1 Year*
+            tbody
+               tr(ng-repeat="rate in model.rateList | orderBy: 'apy' :false")
+                  td {{rate.name}}
+                  td {{rate.apy}} %
+                  td $ {{rate.earnings}}
+         .help-block.pull-right *Based on $50,000 deposit.
+         .clear

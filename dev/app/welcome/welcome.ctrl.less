@@ -1,0 +1,44 @@
+.welcome-ctrl {
+   margin-bottom: 30px;
+
+   .page-header {
+      margin-top: 0;
+   }
+
+   .main-text, ul, .well {
+      margin-bottom: 30px;
+   }
+
+   ul {
+      padding-left: 13px;
+   }
+
+   .well {
+      position: relative;
+
+      p {
+         padding-right: 200px;
+      }
+
+      img {
+         top: -60px;
+         right: 15px;
+         height: 200px;
+         position: absolute;
+      }      
+   }
+
+   @media (max-width: 450px) {
+
+      .well {
+
+         p {
+            padding-right: 19px;
+         }
+
+         img {
+            display: none;
+         }
+      }         
+   }
+}

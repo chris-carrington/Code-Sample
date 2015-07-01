@@ -5,7 +5,7 @@
 1. [Running The Application](#running-the-application)
 
 #Demo
-* <a href="http://example.com/" target="_blank">Click Here</a>
+* <a href="https://s3.amazonaws.com/ally-code-sample/www/index.html" target="_blank">Click Here</a>
 
 #Applications
 * Angular
